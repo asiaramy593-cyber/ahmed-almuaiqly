@@ -1,0 +1,56 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#04101E"/>
+  <g opacity="0.24">
+    <path d="M150 840L430 250L720 840H150Z" fill="url(#goldGlow1)"/>
+    <path d="M700 900L980 190L1270 900H700Z" fill="url(#goldGlow2)"/>
+    <path d="M1100 870L1320 420L1500 870H1100Z" fill="url(#goldGlow3)"/>
+  </g>
+  <g opacity="0.18">
+    <circle cx="420" cy="360" r="180" fill="url(#glass1)"/>
+    <circle cx="850" cy="430" r="250" fill="url(#glass2)"/>
+    <circle cx="1110" cy="270" r="120" fill="url(#glass3)"/>
+  </g>
+  <g opacity="0.22" stroke="#E8C97A" stroke-width="3">
+    <path d="M170 180H390"/>
+    <path d="M1300 170H1480"/>
+    <path d="M140 820H360"/>
+    <path d="M1230 820H1480"/>
+    <path d="M180 220V760" opacity="0.35"/>
+    <path d="M1420 210V780" opacity="0.35"/>
+  </g>
+  <g opacity="0.15" stroke="#F5E1A8" stroke-width="4">
+    <path d="M610 110L790 80L980 130"/>
+    <path d="M150 770L360 710"/>
+    <path d="M1110 760L1420 780"/>
+  </g>
+  <g opacity="0.1" fill="#F7E3AC">
+    <path d="M865 104L882 145H928L892 170L906 212L865 186L824 212L838 170L802 145H848L865 104Z"/>
+    <path d="M1290 140L1301 168H1331L1308 186L1316 214L1290 197L1264 214L1272 186L1249 168H1279L1290 140Z"/>
+  </g>
+  <defs>
+    <radialGradient id="goldGlow1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(435 410) rotate(90) scale(450 500)">
+      <stop stop-color="#D8A74A" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#D8A74A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="goldGlow2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(980 420) rotate(90) scale(470 550)">
+      <stop stop-color="#F5DF9C" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#F5DF9C" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="goldGlow3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1300 560) rotate(90) scale(350 320)">
+      <stop stop-color="#C78A2F" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#C78A2F" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glass1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(420 360) rotate(90) scale(180)">
+      <stop stop-color="#FFF9E7" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#FFF9E7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glass2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(850 430) rotate(90) scale(250)">
+      <stop stop-color="#F7E1B0" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#F7E1B0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glass3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1110 270) rotate(90) scale(120)">
+      <stop stop-color="#FFFFFF" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
