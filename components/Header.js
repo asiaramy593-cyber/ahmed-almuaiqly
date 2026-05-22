@@ -65,7 +65,7 @@ export default function Header() {
           <Icon name={open ? 'close' : 'menu'} size={22} />
         </button>
 
-        <nav className={`nav ${open ? 'is-open' : ''}`}>
+        <nav className={`nav ${open ? 'is-open' : ''}`} aria-label={isEnglish ? 'Main navigation' : 'القائمة الرئيسية'}>
           {primaryLinks.map((link) => {
             const active = currentPath === link.href;
             return (
@@ -76,7 +76,7 @@ export default function Header() {
           })}
 
           <div className="nav-more">
-            <button type="button" className="nav-more-button">
+            <button type="button" className="nav-more-button" aria-label={moreLabel}>
               {moreLabel}
               <span aria-hidden="true">▾</span>
             </button>
@@ -91,6 +91,10 @@ export default function Header() {
               })}
             </div>
           </div>
+
+          <Link href={contactHref} className="btn btn-primary mobile-nav-cta" onClick={() => setOpen(false)}>
+            {contactLabel}
+          </Link>
         </nav>
 
         <Link href={languageHref} className="lang-switch" onClick={() => setOpen(false)}>
