@@ -4,87 +4,143 @@ import Footer from '@/components/Footer';
 import ContactRail from '@/components/ContactRail';
 import { siteConfig } from '@/data/site';
 
+const seoTitle = 'د. أحمد المعيقلي | باحث في الآثار المصرية القديمة ومستشار تاريخي';
+const seoDescription =
+  'الموقع الرسمي للدكتور أحمد المعيقلي، باحث وعالم في الآثار المصرية القديمة ومستشار تاريخي، يقدم مقالات تاريخية ودراسات وتحليلات موثقة في علم المصريات والحضارة المصرية القديمة.';
+
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://ahmed-almuaiqly.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || siteConfig.siteUrl),
   title: {
-    default: "د. أحمد المعيقلي | عالم مصريات وباحث أكاديمي دولي",
-    template: "%s | د. أحمد المعيقلي"
+    default: seoTitle,
+    template: '%s | د. أحمد المعيقلي'
   },
-  description:
-    "الموقع الرسمي للدكتور أحمد المعيقلي، عالم مصريات وباحث أكاديمي متخصص في تاريخ مصر القديمة والحضارة المصرية، يقدم معرفة موثقة وأبحاثًا مختصرة وخدمات تعاون أكاديمي وثقافي.",
-  keywords: [
-    "د. أحمد المعيقلي",
-    "أحمد المعيقلي",
-    "عالم مصريات",
-    "علم المصريات",
-    "تاريخ مصر القديمة",
-    "الحضارة المصرية القديمة",
-    "باحث أكاديمي",
-    "Egyptology",
-    "Ancient Egypt",
-    "Ahmed Al-Muaiqly"
-  ],
-  authors: [{ name: "د. أحمد المعيقلي" }],
-  creator: "د. أحمد المعيقلي",
-  publisher: "د. أحمد المعيقلي",
+  description: seoDescription,
+  keywords: siteConfig.keywords,
+  authors: [{ name: 'د. أحمد المعيقلي', url: siteConfig.siteUrl }],
+  creator: 'د. أحمد المعيقلي',
+  publisher: 'د. أحمد المعيقلي',
+  category: 'Egyptian Archaeology, Egyptology, Historical Research',
   alternates: {
-    canonical: "/",
+    canonical: '/',
     languages: {
-      "ar-EG": "/",
-      "en": "/en"
+      'ar-EG': '/',
+      en: '/en'
     }
   },
   openGraph: {
-    title: "د. أحمد المعيقلي | عالم مصريات وباحث أكاديمي",
-    description:
-      "موقع أكاديمي متخصص في علم المصريات وتاريخ مصر القديمة، يقدم قراءة موثقة للحضارة المصرية القديمة.",
-    url: "/",
-    siteName: "د. أحمد المعيقلي",
-    locale: "ar_EG",
-    type: "website"
+    title: seoTitle,
+    description: seoDescription,
+    url: '/',
+    siteName: siteConfig.siteName,
+    locale: 'ar_EG',
+    type: 'profile',
+    images: [
+      {
+        url: siteConfig.image,
+        width: 1200,
+        height: 630,
+        alt: 'د. أحمد المعيقلي - باحث في الآثار المصرية القديمة'
+      }
+    ]
   },
   twitter: {
-    card: "summary_large_image",
-    title: "د. أحمد المعيقلي | عالم مصريات وباحث أكاديمي",
-    description:
-      "موقع أكاديمي متخصص في علم المصريات وتاريخ مصر القديمة."
+    card: 'summary_large_image',
+    title: seoTitle,
+    description: seoDescription,
+    images: [siteConfig.image]
   },
   robots: {
     index: true,
-    follow: true
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
   }
 };
 
 export const viewport = {
-  width: "device-width",
+  width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#050b14"
+  themeColor: '#050b14'
 };
-
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: siteConfig.titleAr,
-  alternateName: siteConfig.titleEn,
-  description: siteConfig.description,
-  jobTitle: siteConfig.shortRole,
-  url: siteConfig.siteUrl,
-  image: `${siteConfig.siteUrl}${siteConfig.image}`,
-  sameAs: [siteConfig.facebook],
-  knowsAbout: ['Egyptology', 'علم المصريات', 'الحضارة المصرية القديمة', 'حماية التراث'],
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: siteConfig.addressLines.join('، '),
-    addressCountry: 'EG'
-  },
-  contactPoint: {
-    '@type': 'ContactPoint',
-    email: siteConfig.email,
-    telephone: siteConfig.phoneDisplay,
-    contactType: 'customer support'
-  }
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': `${siteConfig.siteUrl}/#person`,
+      name: siteConfig.titleAr,
+      alternateName: [siteConfig.titleEn, 'أحمد المعيقلي', 'دكتور أحمد المعيقلي'],
+      description: siteConfig.description,
+      url: siteConfig.siteUrl,
+      image: `${siteConfig.siteUrl}${siteConfig.image}`,
+      jobTitle: 'باحث في الآثار المصرية القديمة ومستشار تاريخي',
+      hasOccupation: [
+        {
+          '@type': 'Occupation',
+          name: 'باحث آثار',
+          occupationLocation: {
+            '@type': 'Country',
+            name: 'Egypt'
+          }
+        },
+        {
+          '@type': 'Occupation',
+          name: 'Historical Consultant'
+        }
+      ],
+      knowsAbout: [
+        'أحمد المعيقلي',
+        'دكتور أحمد المعيقلي',
+        'آثار مصرية',
+        'باحث آثار',
+        'علم المصريات',
+        'مقالات تاريخية',
+        'Egyptology',
+        'Egyptian Archaeology',
+        'Ancient Egypt'
+      ],
+      sameAs: [siteConfig.facebook].filter(Boolean),
+      contactPoint: {
+        '@type': 'ContactPoint',
+        email: siteConfig.email,
+        telephone: siteConfig.phoneDisplay,
+        contactType: 'official inquiries',
+        availableLanguage: ['Arabic', 'English']
+      }
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteConfig.siteUrl}/#website`,
+      url: siteConfig.siteUrl,
+      name: siteConfig.siteName,
+      inLanguage: 'ar-EG',
+      description: siteConfig.description,
+      publisher: {
+        '@id': `${siteConfig.siteUrl}/#person`
+      }
+    },
+    {
+      '@type': 'ProfilePage',
+      '@id': `${siteConfig.siteUrl}/#profilepage`,
+      url: siteConfig.siteUrl,
+      name: seoTitle,
+      description: seoDescription,
+      inLanguage: 'ar-EG',
+      about: {
+        '@id': `${siteConfig.siteUrl}/#person`
+      },
+      isPartOf: {
+        '@id': `${siteConfig.siteUrl}/#website`
+      }
+    }
+  ]
 };
 
 export default function RootLayout({ children }) {

@@ -17,51 +17,51 @@ import {
 import { siteConfig } from '@/data/site';
 
 export const metadata = {
-  title: 'Dr. Ahmed Al-Muaiqly | Egyptologist',
+  title: 'Dr. Ahmed Al-Muaiqly | Ancient Egyptian Archaeology Researcher',
   description: englishSite.description
 };
 
 const englishHeroHighlights = [
-  { label: 'Experience across Egypt and Europe' },
-  { label: 'Documented historical knowledge' },
-  { label: 'Heritage and identity service' },
-  { label: 'Clear scholarly communication' }
+  { label: 'Researcher in ancient Egyptian archaeology' },
+  { label: 'Historical articles and studies' },
+  { label: 'Egyptology and archaeological analysis' },
+  { label: 'Knowledge platforms for ancient Egypt' }
 ];
 
 const englishBiography = {
   intro:
-    'A research profile grounded in academic study, field experience, and documented engagement with ancient Egyptian history and heritage.',
+    'A research profile grounded in archaeological interest, historical articles, and documented engagement with ancient Egyptian civilization.',
   body: [
-    'Dr. Ahmed Al-Muaiqly is an Egyptian academic researcher devoted to the study of ancient Egyptian civilization, hieroglyphic texts, and heritage-related questions.',
-    'Through years of academic work and field engagement between Egypt and Europe, he presents documented readings of Egyptian history and responds to unsupported narratives with clear scholarly evidence.',
-    'This website introduces his academic background, research interests, and official channels for cooperation with researchers, institutions, and cultural organizations in Egypt and abroad.'
+    'Dr. Ahmed Al-Muaiqly is a researcher in ancient Egyptian archaeology and a historical consultant devoted to Egyptology and ancient Egyptian civilization.',
+    'His work focuses on historical articles, studies, archaeological analysis, and clear presentation of ancient Egyptian evidence and contexts.',
+    'This website introduces his profile, research interests, scientific output, and official channels for cooperation with institutions and knowledge platforms.'
   ]
 };
 
 const englishCredentials = [
   {
     icon: 'book',
-    degree: 'Ph.D. in Egyptology',
-    institution: 'Sorbonne University, Paris - France',
-    details: 'Specialization in the political history of New Kingdom rulers and the analysis of hieroglyphic texts.'
+    degree: 'Academic background in archaeology and ancient history',
+    institution: 'Specialized study of ancient Egyptian civilization',
+    details: 'Focus on archaeological evidence, inscriptions, symbols, and the historical context of ancient Egypt.'
   },
   {
     icon: 'temple',
-    degree: 'M.A. in Ancient Near Eastern Archaeology',
-    institution: 'University College London (UCL), United Kingdom',
-    details: 'Research focus on the relationship between Egyptian funerary architecture and religious belief.'
+    degree: 'Research experience in Egyptology',
+    institution: 'Articles, studies, and archaeological analyses',
+    details: 'Research interest in sites, inscriptions, architecture, and documented historical interpretation.'
   },
   {
     icon: 'shield',
-    degree: 'Advanced Diploma in Cultural Heritage Management',
-    institution: 'ICCROM, Rome - Italy',
-    details: 'Professional focus on conservation, documentation, and sustainable management of cultural heritage.'
+    degree: 'Field-oriented archaeological analysis',
+    institution: 'Observation and interpretation of Egyptian archaeological evidence',
+    details: 'Combining desk research with field-oriented reading of archaeological sites and material culture.'
   },
   {
     icon: 'scroll',
-    degree: 'Honorary Research Fellowship',
-    institution: 'German Archaeological Institute in Cairo (DAI)',
-    details: 'Participation in documentation and heritage protection initiatives connected to archaeological sites in Luxor.'
+    degree: 'Historical consulting and specialized content',
+    institution: 'Knowledge platforms and ancient Egypt initiatives',
+    details: 'Preparing and reviewing historical content for platforms and cultural initiatives focused on ancient Egyptian civilization.'
   }
 ];
 
@@ -111,16 +111,16 @@ function EnglishHero() {
 
           <div className="hero-stats egypt-card glass-card">
             <div className="hero-stat-item">
-              <strong>+20</strong>
-              <span>Years of research and study</span>
+              <strong>Research</strong>
+              <span>in ancient Egyptian archaeology</span>
             </div>
             <div className="hero-stat-item">
-              <strong>+50</strong>
-              <span>Published research and knowledge materials</span>
+              <strong>Articles</strong>
+              <span>historical studies and analyses</span>
             </div>
             <div className="hero-stat-item">
-              <strong>15+</strong>
-              <span>Academic and international contributions</span>
+              <strong>Platforms</strong>
+              <span>focused on ancient Egypt</span>
             </div>
           </div>
         </div>

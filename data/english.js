@@ -18,11 +18,11 @@ export const englishNav = {
 
 export const englishSite = {
   title: 'Dr. Ahmed Al-Muaiqly',
-  role: 'Egyptologist | International Academic Researcher',
-  headerRole: 'Egyptologist | Academic Researcher',
-  slogan: 'Protecting history through knowledge, and presenting truth through documented evidence.',
+  role: 'Researcher in Ancient Egyptian Archaeology | Historical Consultant',
+  headerRole: 'Archaeology Researcher | Historical Consultant',
+  slogan: 'Documented archaeological readings of ancient Egyptian civilization.',
   description:
-    'An academic researcher specializing in Egyptology, presenting documented readings of ancient Egyptian history and opening channels for scholarly and cultural collaboration with researchers and heritage institutions.',
+    'The official profile of Dr. Ahmed Al-Muaiqly, a researcher in ancient Egyptian archaeology and historical consultant presenting historical articles, studies, and documented Egyptology analyses.',
   contactNow: 'Contact Now',
   languageLabel: 'العربية'
 };
@@ -30,51 +30,51 @@ export const englishSite = {
 export const englishPillars = [
   {
     icon: 'temple',
-    title: 'Documented Academic Reference',
-    text: 'A research-based approach grounded in trusted sources and responsible reading of ancient Egyptian history.'
+    title: 'Documented Archaeological Method',
+    text: 'A research-based approach grounded in archaeological evidence, inscriptions, and historical references.'
   },
   {
     icon: 'scroll',
-    title: 'Clear Scholarly Communication',
-    text: 'Historical knowledge presented in a language that serves both specialists and the wider public.'
+    title: 'Clear Historical Articles',
+    text: 'Historical articles and studies presented clearly for specialists and general readers.'
   },
   {
     icon: 'shield',
-    title: 'Heritage and Identity Protection',
-    text: 'A documented response to inaccurate narratives through evidence, inscriptions, and academic references.'
+    title: 'Historical Consultation',
+    text: 'Knowledge support for platforms and institutions interested in ancient Egyptian civilization.'
   }
 ];
 
 export const englishServices = [
   {
     icon: 'book',
-    title: 'Research Assistance',
-    text: 'Support for researchers, students, and interested institutions preparing studies and reviews related to ancient Egypt and Egyptology.'
+    title: 'Historical Article Review',
+    text: 'Preparation and review of historical articles and studies related to ancient Egyptian archaeology and Egyptology.'
   },
   {
     icon: 'temple',
-    title: 'Heritage and Field Consultation',
-    text: 'Scholarly consultation for projects related to documentation, field work, heritage interpretation, and archaeological context.'
+    title: 'Archaeological Content Consultation',
+    text: 'Specialized consultation for cultural and media content related to archaeological sites, symbols, and ancient Egyptian civilization.'
   },
   {
     icon: 'scroll',
-    title: 'Specialized Historical Content',
-    text: 'Preparation and review of documented historical content for media platforms, educational institutions, and cultural initiatives.'
+    title: 'Archaeological Analysis Content',
+    text: 'Preparation of documented analyses of inscriptions, symbols, sites, and historical contexts.'
   },
   {
     icon: 'lecture',
     title: 'Lectures and Seminars',
-    text: 'Academic and public lectures on ancient Egyptian civilization, symbols, inscriptions, and heritage awareness.'
+    text: 'Lectures and seminars on Egyptology, Egyptian archaeology, inscriptions, and methods of reading ancient history.'
   },
   {
     icon: 'globe',
     title: 'Institutional Collaboration',
-    text: 'Collaboration with universities, cultural centers, museums, and media organizations seeking reliable scholarly content.'
+    text: 'Collaboration with institutions and knowledge platforms seeking accurate historical and archaeological content.'
   },
   {
     icon: 'shield',
-    title: 'Scholarly Response to Distortion',
-    text: 'Documented responses to inaccurate claims concerning ancient Egyptian civilization, identity, and historical evidence.'
+    title: 'Correction of Historical Misinformation',
+    text: 'Documented responses to inaccurate historical claims using evidence and specialized references.'
   }
 ];
 

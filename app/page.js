@@ -28,8 +28,8 @@ export default function HomePage() {
         <div className="container">
           <SectionTitle
             eyebrow="ملامح التخصص"
-            title="رؤية علمية موثقة في خدمة التاريخ المصري"
-            text="محتوى بحثي يوازن بين المرجع الأكاديمي الصارم وحسن العرض، ويقرب تاريخ مصر القديمة إلى القارئ بلغة واضحة ورصينة."
+            title="د. أحمد المعيقلي: باحث في الآثار المصرية القديمة"
+            text="موقع تعريفي وبحثي يقدّم مقالات تاريخية ودراسات وتحليلات أثرية حول علم المصريات والحضارة المصرية القديمة."
           />
           <CardGrid items={trustPillars} />
         </div>
@@ -40,26 +40,26 @@ export default function HomePage() {
           <div className="egypt-card glass-card visual-panel home-pharaoh-panel about-feature-panel">
             <div className="visual-panel-inner about-feature-inner">
               <span className="visual-chip">نبذة تعريفية</span>
-              <h3>ملامح خبرة أكاديمية ممتدة</h3>
+              <h3>باحث آثار ومستشار تاريخي</h3>
               <p>
-                تعريف موجز بالسيرة العلمية والاهتمامات البحثية ومسارات التعاون الأكاديمي والثقافي داخل مصر وخارجها.
+                تعريف موجز بشغف الدكتور أحمد المعيقلي بالآثار المصرية القديمة، وأبحاثه التاريخية، وإدارته لمنصات معرفية تهتم بالحضارة المصرية.
               </p>
               <div className="about-mini-grid">
                 <div className="about-mini-card">
-                  <strong>خبرة أكاديمية</strong>
-                  <span>دراسة متخصصة للحضارة المصرية القديمة بين البحث الأكاديمي والعمل الميداني.</span>
+                  <strong>اهتمام أثري</strong>
+                  <span>شغف ممتد بالمواقع والشواهد والرموز المرتبطة بمصر القديمة.</span>
                 </div>
                 <div className="about-mini-card">
-                  <strong>طرح موثق</strong>
-                  <span>قراءة تاريخية تستند إلى الأدلة والنقوش والمراجع العلمية المعتمدة.</span>
+                  <strong>أبحاث تاريخية</strong>
+                  <span>مقالات ودراسات وتحليلات مبنية على منهج ومصادر واضحة.</span>
                 </div>
                 <div className="about-mini-card">
-                  <strong>تعاون ثقافي</strong>
-                  <span>مسارات تعاون مع الباحثين والمؤسسات المعنية بالتراث داخل مصر وخارجها.</span>
+                  <strong>منصات معرفية</strong>
+                  <span>إدارة ودعم محتوى رقمي متخصص في الحضارة المصرية القديمة.</span>
                 </div>
                 <div className="about-mini-card">
-                  <strong>وعي تاريخي</strong>
-                  <span>تقديم المعرفة بلغة واضحة تحفظ العمق العلمي وتخدم القارئ العام والمتخصص.</span>
+                  <strong>استشارة تاريخية</strong>
+                  <span>دعم المحتوى الثقافي والإعلامي بمراجعة تاريخية وأثرية دقيقة.</span>
                 </div>
               </div>
             </div>
@@ -68,7 +68,7 @@ export default function HomePage() {
           <div>
             <SectionTitle
               eyebrow="من هو الدكتور؟"
-              title="سيرة بحثية تستند إلى الدراسة والعمل الميداني"
+              title="السيرة الذاتية: شغف بالآثار وأبحاث في تاريخ مصر القديمة"
               text={biography.intro}
               align="right"
             />
@@ -88,9 +88,9 @@ export default function HomePage() {
       <section className="section">
         <div className="container">
           <SectionTitle
-            eyebrow="الشهادات الدولية"
-            title="مسار أكاديمي يرسخ الثقة والمصداقية"
-            text="عرض منظم للمؤهلات والشهادات والزمالات التي تشكل الخلفية العلمية للدكتور أحمد المعيقلي في علم المصريات وحفظ التراث."
+            eyebrow="المؤهلات والخبرات"
+            title="مؤهلات وخبرات في الآثار وعلم المصريات"
+            text="عرض منظم للخلفية الأكاديمية والخبرات البحثية والميدانية المرتبطة بالآثار المصرية القديمة، وتحليل الشواهد التاريخية، وإعداد المحتوى المتخصص."
           />
           <CardGrid items={credentials} variant="credentials" />
         </div>
@@ -100,8 +100,8 @@ export default function HomePage() {
         <div className="container">
           <SectionTitle
             eyebrow="الرؤية والرسالة"
-            title="رؤية علمية تصون التاريخ والهوية"
-            text="رؤية فكرية ورسالة معرفية تعبّران عن موقف علمي مسؤول تجاه التاريخ المصري وحضارته الممتدة."
+            title="رؤية أثرية تحفظ الوعي بالحضارة المصرية"
+            text="رؤية ورسالة تركزان على تقديم الآثار المصرية القديمة ومقالات التاريخ بمنهج واضح وموثوق."
           />
           <div className="card-grid card-grid-mission">
             {visionMission.map((item) => (
@@ -119,8 +119,8 @@ export default function HomePage() {
         <div className="container">
           <SectionTitle
             eyebrow="الخدمات"
-            title="مجالات التعاون والخدمات"
-            text="خدمات معرفية وبحثية واستشارية موجّهة للباحثين والطلاب والمؤسسات والمهتمين بعلم المصريات والتراث التاريخي."
+            title="مجالات العمل والاستشارات التاريخية"
+            text="خدمات بحثية واستشارية موجهة للباحثين والمؤسسات والمنصات المهتمة بالآثار المصرية القديمة والمقالات التاريخية."
           />
           <CardGrid items={services} variant="services" />
         </div>
@@ -129,9 +129,9 @@ export default function HomePage() {
       <section className="section section-alt">
         <div className="container">
           <SectionTitle
-            eyebrow="الأبحاث والمقالات"
-            title="محاور بحثية تعكس عمق التخصص والاهتمام"
-            text="مجالات بحثية وفكرية يمكن من خلالها تقديم مقالات، رؤى، ومحتوى موثق يخدم القارئ والباحث والمهتم بتاريخ مصر القديمة."
+            eyebrow="الإنتاج العلمي"
+            title="مقالات تاريخية ودراسات وتحليلات أثرية"
+            text="مساحة مخصصة للإنتاج العلمي: مقالات تاريخية، كتب ودراسات، وتحليلات أثرية أو قراءات للاكتشافات والشواهد المنشورة."
           />
           <CardGrid items={researchThemes} variant="topics" />
           <div className="center-actions">
@@ -144,14 +144,14 @@ export default function HomePage() {
         <div className="container">
           <SectionTitle
             eyebrow="مزايا إضافية"
-            title="مسارات معرفية وتعاون مؤسسي وحضور إعلامي"
-            text="ثلاث بوابات إضافية تعزز قيمة الموقع: مكتبة معرفية للمهتمين، وصفحة مخصصة لطلبات التعاون الرسمي، ومساحة تعرض محاور الظهور الإعلامي والندوات العلمية."
+            title="إنتاج علمي ومنصات معرفية وتعاون مؤسسي"
+            text="بوابات إضافية تخدم الباحث والقارئ: مكتبة مقالات تاريخية، قناة للتعاون الرسمي، ومساحة لمحاور الظهور الإعلامي والندوات الخاصة بالآثار المصرية القديمة."
           />
           <div className="phase2-grid">
             <article className="egypt-card glass-card phase2-card">
               <div>
                 <span className="eyebrow">المكتبة المعرفية</span>
-                <h3>مواد معرفية ومقالات وملفات تحليلية</h3>
+                <h3>مقالات تاريخية ودراسات وتحليلات أثرية</h3>
                 <p>{knowledgeCollections[0].text}</p>
               </div>
               <Link href="/knowledge" className="btn btn-secondary">استعراض المكتبة</Link>
@@ -159,7 +159,7 @@ export default function HomePage() {
             <article className="egypt-card glass-card phase2-card">
               <div>
                 <span className="eyebrow">التعاون الرسمي</span>
-                <h3>قناة مخصصة للجهات والمؤسسات</h3>
+                <h3>قناة للجهات والمنصات المهتمة بالآثار</h3>
                 <p>{collaborationTracks[0].text}</p>
               </div>
               <Link href="/collaboration" className="btn btn-secondary">إرسال طلب تعاون</Link>
@@ -167,7 +167,7 @@ export default function HomePage() {
             <article className="egypt-card glass-card phase2-card">
               <div>
                 <span className="eyebrow">الظهور الإعلامي</span>
-                <h3>محاور قابلة للعرض في اللقاءات والندوات</h3>
+                <h3>محاور أثرية للقاءات والندوات</h3>
                 <p>{mediaHighlights[0].summary}</p>
               </div>
               <Link href="/media" className="btn btn-secondary">استعراض المحاور</Link>

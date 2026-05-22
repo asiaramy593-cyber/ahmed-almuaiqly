@@ -34,16 +34,16 @@ export default function Hero() {
 
           <div className="hero-stats egypt-card glass-card">
             <div className="hero-stat-item">
-              <strong>+20</strong>
-              <span>عامًا من البحث والدراسة</span>
+              <strong>أبحاث</strong>
+              <span>في الآثار المصرية القديمة</span>
             </div>
             <div className="hero-stat-item">
-              <strong>+50</strong>
-              <span>بحثًا ومادةً معرفية منشورة</span>
+              <strong>مقالات</strong>
+              <span>تاريخية وتحليلات أثرية</span>
             </div>
             <div className="hero-stat-item">
-              <strong>15+</strong>
-              <span>مشاركة علمية وبعثة دولية</span>
+              <strong>منصات</strong>
+              <span>معرفية مهتمة بالحضارة المصرية</span>
             </div>
           </div>
         </div>
