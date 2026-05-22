@@ -7,7 +7,7 @@ import { Icon } from '@/components/Icons';
 import { navLinks, siteConfig } from '@/data/site';
 import { englishNav, englishSite } from '@/data/english';
 
-const arPrimary = navLinks.filter((link) => ['/', '/about', '/services', '/articles', '/contact'].includes(link.href));
+const arPrimary = navLinks.filter((link) => ['/', '/about', '/services', '/articles'].includes(link.href));
 const arMore = [
   { href: '/faq', label: 'الأسئلة الشائعة' },
   { href: '/request', label: 'طلب رسمي' },
@@ -31,7 +31,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const currentPath = useMemo(() => pathname || '/', [pathname]);
   const isEnglish = currentPath.startsWith('/en');
-  const primaryLinks = isEnglish ? englishNav.primary : arPrimary;
+  const primaryLinks = isEnglish ? englishNav.primary.filter((link) => link.href !== '/en/contact') : arPrimary;
   const moreLinks = isEnglish ? englishNav.more : arMore;
   const languageHref = mapLanguagePath(currentPath, isEnglish);
   const languageLabel = isEnglish ? 'العربية' : 'English';
