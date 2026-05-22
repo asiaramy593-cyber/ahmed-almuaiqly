@@ -2234,3 +2234,208 @@ img, svg, video {
     font-size: clamp(1.55rem, 8vw, 2rem) !important;
   }
 }
+
+
+/* =========================================================
+   Surgical header/menu repair - v3
+   Fixes duplicated Contact button and prevents language/CTA overlap.
+   Responsible files: app/globals.css + components/Header.js
+   ========================================================= */
+.site-header .nav-wrap {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+.site-header .nav {
+  min-width: 0 !important;
+  gap: 8px !important;
+}
+
+.site-header .lang-switch,
+.site-header .header-cta,
+.site-header .menu-toggle,
+.site-header .brand-mark {
+  flex-shrink: 0 !important;
+}
+
+.site-header .lang-switch {
+  margin-inline: 6px !important;
+}
+
+.site-header .header-cta {
+  margin-inline-start: 8px !important;
+  white-space: nowrap !important;
+}
+
+.mobile-nav-cta {
+  display: none !important;
+}
+
+@media (min-width: 981px) {
+  .site-header .nav-wrap {
+    grid-template-columns: auto minmax(0, 1fr) auto auto !important;
+    gap: 14px !important;
+  }
+
+  .site-header .brand {
+    min-width: 220px !important;
+  }
+
+  .site-header .nav {
+    justify-content: center !important;
+    overflow: visible !important;
+  }
+}
+
+@media (max-width: 980px) {
+  .site-header .nav-wrap {
+    width: min(100% - 18px, 1240px) !important;
+    min-height: 72px !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto auto !important;
+    grid-template-areas: "brand language menu" !important;
+    gap: 8px !important;
+    align-items: center !important;
+  }
+
+  .site-header .brand {
+    grid-area: brand !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    overflow: hidden !important;
+  }
+
+  .site-header .brand span:last-child,
+  .site-header .brand strong,
+  .site-header .brand small {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+
+  .site-header .lang-switch {
+    grid-area: language !important;
+    margin-inline: 0 !important;
+  }
+
+  .site-header .menu-toggle {
+    grid-area: menu !important;
+    display: inline-flex !important;
+  }
+
+  .site-header .header-cta {
+    display: none !important;
+  }
+
+  .site-header .nav {
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    inset-inline: 0 !important;
+    width: 100% !important;
+    display: none !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 7px !important;
+    max-height: min(78vh, 620px) !important;
+    padding: 12px !important;
+    border-radius: 22px !important;
+    border: 1px solid rgba(241, 215, 146, 0.22) !important;
+    background: linear-gradient(180deg, rgba(4, 9, 18, 0.985), rgba(6, 13, 25, 0.97)) !important;
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.48) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    z-index: 200 !important;
+  }
+
+  .site-header .nav.is-open {
+    display: flex !important;
+  }
+
+  .site-header .nav a,
+  .site-header .nav-more-menu a,
+  .site-header .mobile-nav-cta {
+    width: 100% !important;
+    min-height: 46px !important;
+    justify-content: flex-start !important;
+    text-align: start !important;
+    padding: 0 14px !important;
+    border-radius: 15px !important;
+    white-space: normal !important;
+    line-height: 1.45 !important;
+  }
+
+  .site-header .nav-more {
+    width: 100% !important;
+    display: grid !important;
+  }
+
+  .site-header .nav-more-button {
+    display: none !important;
+  }
+
+  .site-header .nav-more-menu {
+    position: static !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    display: grid !important;
+    gap: 7px !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .site-header .mobile-nav-cta {
+    display: inline-flex !important;
+    justify-content: center !important;
+    min-height: 50px !important;
+    margin-top: 6px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-header .nav-wrap {
+    width: min(100% - 14px, 1240px) !important;
+    min-height: 66px !important;
+    gap: 6px !important;
+  }
+
+  .site-header .brand {
+    gap: 7px !important;
+  }
+
+  .site-header .brand-mark {
+    width: 40px !important;
+    height: 40px !important;
+    flex-basis: 40px !important;
+  }
+
+  .site-header .brand strong {
+    font-size: clamp(0.9rem, 4vw, 1.04rem) !important;
+  }
+
+  .site-header .brand small {
+    display: block !important;
+    font-size: 0.62rem !important;
+  }
+
+  .site-header .lang-switch {
+    min-width: 62px !important;
+    min-height: 38px !important;
+    padding-inline: 8px !important;
+    font-size: 0.72rem !important;
+  }
+
+  .site-header .menu-toggle {
+    width: 40px !important;
+    height: 40px !important;
+    flex-basis: 40px !important;
+  }
+}
