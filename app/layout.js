@@ -4,39 +4,42 @@ import Footer from '@/components/Footer';
 import ContactRail from '@/components/ContactRail';
 import { siteConfig } from '@/data/site';
 
+const siteUrl = siteConfig.siteUrl.replace(/\/$/, '');
+const seoImage = `${siteUrl}${siteConfig.image}`;
+
 const seoTitle = 'د. أحمد المعيقلي | باحث في الآثار المصرية القديمة ومستشار تاريخي';
 const seoDescription =
   'الموقع الرسمي للدكتور أحمد المعيقلي، باحث وعالم في الآثار المصرية القديمة ومستشار تاريخي، يقدم مقالات تاريخية ودراسات وتحليلات موثقة في علم المصريات والحضارة المصرية القديمة.';
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || siteConfig.siteUrl),
+  metadataBase: new URL(siteUrl),
   title: {
     default: seoTitle,
     template: '%s | د. أحمد المعيقلي'
   },
   description: seoDescription,
   keywords: siteConfig.keywords,
-  authors: [{ name: 'د. أحمد المعيقلي', url: siteConfig.siteUrl }],
+  authors: [{ name: 'د. أحمد المعيقلي', url: siteUrl }],
   creator: 'د. أحمد المعيقلي',
   publisher: 'د. أحمد المعيقلي',
   category: 'Egyptian Archaeology, Egyptology, Historical Research',
   alternates: {
-    canonical: '/',
+    canonical: siteUrl,
     languages: {
-      'ar-EG': '/',
-      en: '/en'
+      'ar-EG': siteUrl,
+      en: `${siteUrl}/en`
     }
   },
   openGraph: {
     title: seoTitle,
     description: seoDescription,
-    url: '/',
+    url: siteUrl,
     siteName: siteConfig.siteName,
     locale: 'ar_EG',
     type: 'profile',
     images: [
       {
-        url: siteConfig.image,
+        url: seoImage,
         width: 1200,
         height: 630,
         alt: 'د. أحمد المعيقلي - باحث في الآثار المصرية القديمة'
@@ -47,7 +50,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: seoTitle,
     description: seoDescription,
-    images: [siteConfig.image]
+    images: [seoImage]
   },
   robots: {
     index: true,
@@ -74,12 +77,12 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Person',
-      '@id': `${siteConfig.siteUrl}/#person`,
+      '@id': `${siteUrl}/#person`,
       name: siteConfig.titleAr,
       alternateName: [siteConfig.titleEn, 'أحمد المعيقلي', 'دكتور أحمد المعيقلي'],
       description: siteConfig.description,
-      url: siteConfig.siteUrl,
-      image: `${siteConfig.siteUrl}${siteConfig.image}`,
+      url: siteUrl,
+      image: seoImage,
       jobTitle: 'باحث في الآثار المصرية القديمة ومستشار تاريخي',
       hasOccupation: [
         {
@@ -117,27 +120,27 @@ const jsonLd = {
     },
     {
       '@type': 'WebSite',
-      '@id': `${siteConfig.siteUrl}/#website`,
-      url: siteConfig.siteUrl,
+      '@id': `${siteUrl}/#website`,
+      url: siteUrl,
       name: siteConfig.siteName,
       inLanguage: 'ar-EG',
       description: siteConfig.description,
       publisher: {
-        '@id': `${siteConfig.siteUrl}/#person`
+        '@id': `${siteUrl}/#person`
       }
     },
     {
       '@type': 'ProfilePage',
-      '@id': `${siteConfig.siteUrl}/#profilepage`,
-      url: siteConfig.siteUrl,
+      '@id': `${siteUrl}/#profilepage`,
+      url: siteUrl,
       name: seoTitle,
       description: seoDescription,
       inLanguage: 'ar-EG',
       about: {
-        '@id': `${siteConfig.siteUrl}/#person`
+        '@id': `${siteUrl}/#person`
       },
       isPartOf: {
-        '@id': `${siteConfig.siteUrl}/#website`
+        '@id': `${siteUrl}/#website`
       }
     }
   ]
