@@ -1,6 +1,6 @@
 export const siteConfig = {
   siteName: 'د. أحمد المعيقلي | باحث في الآثار المصرية القديمة',
-  siteUrl: 'https://ahmed-almuaiqly.vercel.app',
+  siteUrl: 'https://ahmed-almuaiqly-delta.vercel.app',
   titleAr: 'د. أحمد المعيقلي',
   titleEn: 'Dr. Ahmed Al-Muaiqly',
   shortRole: 'باحث في الآثار المصرية القديمة | مستشار تاريخي | مهتم بعلم المصريات',
