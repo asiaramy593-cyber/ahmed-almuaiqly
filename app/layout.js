@@ -136,6 +136,13 @@ const jsonLd = {
       name: seoTitle,
       description: seoDescription,
       inLanguage: 'ar-EG',
+      mainEntity: {
+        '@type': 'Person',
+        '@id': `${siteUrl}/#person`,
+        name: siteConfig.titleAr,
+        url: siteUrl,
+        image: seoImage
+      },
       about: {
         '@id': `${siteUrl}/#person`
       },
