@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://ahmed-almuaiqly-delta.vercel.app/sitemap.xml
 Host: https://ahmed-almuaiqly-delta.vercel.app
+Sitemap: https://ahmed-almuaiqly-delta.vercel.app/sitemap.xml
+Sitemap: https://ahmed-almuaiqly-delta.vercel.app/google-sitemap.xml
