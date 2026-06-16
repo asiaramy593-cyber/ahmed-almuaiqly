@@ -1,5 +1,7 @@
-User-agent: *
+User-Agent: *
 Allow: /
+
 Host: https://ahmed-almuaiqly-delta.vercel.app
 Sitemap: https://ahmed-almuaiqly-delta.vercel.app/sitemap.xml
 Sitemap: https://ahmed-almuaiqly-delta.vercel.app/google-sitemap.xml
+Sitemap: https://ahmed-almuaiqly-delta.vercel.app/urls.txt
