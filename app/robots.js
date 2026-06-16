@@ -1,17 +1,19 @@
-import { siteConfig } from '@/data/site';
-
-const siteUrl = siteConfig.siteUrl.replace(/\/$/, '');
+const baseUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://ahmed-almuaiqly-delta.vercel.app";
 
 export default function robots() {
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/'
-    },
-    sitemap: [
-      `${siteUrl}/sitemap.xml`,
-      `${siteUrl}/google-sitemap.xml`
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+      },
     ],
-    host: siteUrl
+    sitemap: [
+      `${baseUrl}/sitemap.xml`,
+      `${baseUrl}/google-sitemap.xml`,
+      `${baseUrl}/urls.txt`,
+    ],
+    host: baseUrl,
   };
 }
