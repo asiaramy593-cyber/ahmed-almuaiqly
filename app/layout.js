@@ -4,12 +4,13 @@ import Footer from '@/components/Footer';
 import ContactRail from '@/components/ContactRail';
 import { siteConfig } from '@/data/site';
 
+// تأكد 100% أن siteConfig.siteUrl في ملف site.js هو: https://ahmed-almuaiqly-delta.vercel.app
 const siteUrl = siteConfig.siteUrl.replace(/\/$/, '');
 const seoImage = `${siteUrl}${siteConfig.image}`;
 
-const seoTitle = 'د. أحمد المعيقلي | باحث في الآثار المصرية القديمة ومستشار تاريخي';
+const seoTitle = 'د. أحمد المعيقلي | باحث آثار ومستشار تاريخي للحضارة المصرية';
 const seoDescription =
-  'الموقع الرسمي للدكتور أحمد المعيقلي، باحث وعالم في الآثار المصرية القديمة ومستشار تاريخي، يقدم مقالات تاريخية ودراسات وتحليلات موثقة في علم المصريات والحضارة المصرية القديمة.';
+  'الموقع الرسمي للدكتور أحمد المعيقلي، باحث وعالم في الآثار المصرية القديمة ومستشار تاريخي. يقدم دراسات، تحليلات، ومقالات موثقة في علم المصريات وتاريخ مصر القديمة.';
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -18,7 +19,21 @@ export const metadata = {
     template: '%s | د. أحمد المعيقلي'
   },
   description: seoDescription,
-  keywords: siteConfig.keywords,
+  // تعمدت إضافة الكلمات البحثية بالعربي هنا مباشرة لضمان التقاط جوجل لها
+  keywords: [
+    'أحمد المعيقلي',
+    'د. أحمد المعيقلي',
+    'دكتور أحمد المعيقلي',
+    'باحث آثار',
+    'أحمد المعيقلي باحث آثار',
+    'علم المصريات',
+    'الحضارة المصرية القديمة',
+    'مستشار تاريخي',
+    'مقالات تاريخية',
+    'Egyptology',
+    'Egyptian Archaeology',
+    ...(siteConfig.keywords || [])
+  ],
   authors: [{ name: 'د. أحمد المعيقلي', url: siteUrl }],
   creator: 'د. أحمد المعيقلي',
   publisher: 'د. أحمد المعيقلي',
@@ -64,7 +79,6 @@ export const metadata = {
     }
   }
 };
-
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -78,9 +92,16 @@ const jsonLd = {
     {
       '@type': 'Person',
       '@id': `${siteUrl}/#person`,
-      name: siteConfig.titleAr,
-      alternateName: [siteConfig.titleEn, 'أحمد المعيقلي', 'دكتور أحمد المعيقلي'],
-      description: siteConfig.description,
+      name: siteConfig.titleAr || 'د. أحمد المعيقلي',
+      // إضافة الكلمات المفتاحية باللغة العربية هنا تدعم ظهور الدكتور في الـ Knowledge Graph لجوجل
+      alternateName: [
+        siteConfig.titleEn, 
+        'أحمد المعيقلي', 
+        'دكتور أحمد المعيقلي', 
+        'د. أحمد المعيقلي باحث آثار', 
+        'أحمد المعيقلي باحث آثار'
+      ],
+      description: seoDescription,
       url: siteUrl,
       image: seoImage,
       jobTitle: 'باحث في الآثار المصرية القديمة ومستشار تاريخي',
@@ -101,6 +122,8 @@ const jsonLd = {
       knowsAbout: [
         'أحمد المعيقلي',
         'دكتور أحمد المعيقلي',
+        'د. أحمد المعيقلي باحث آثار',
+        'أحمد المعيقلي باحث آثار',
         'آثار مصرية',
         'باحث آثار',
         'علم المصريات',
@@ -122,9 +145,9 @@ const jsonLd = {
       '@type': 'WebSite',
       '@id': `${siteUrl}/#website`,
       url: siteUrl,
-      name: siteConfig.siteName,
+      name: siteConfig.siteName || 'الموقع الرسمي للدكتور أحمد المعيقلي',
       inLanguage: 'ar-EG',
-      description: siteConfig.description,
+      description: seoDescription,
       publisher: {
         '@id': `${siteUrl}/#person`
       }
@@ -139,7 +162,7 @@ const jsonLd = {
       mainEntity: {
         '@type': 'Person',
         '@id': `${siteUrl}/#person`,
-        name: siteConfig.titleAr,
+        name: siteConfig.titleAr || 'د. أحمد المعيقلي',
         url: siteUrl,
         image: seoImage
       },
@@ -152,14 +175,16 @@ const jsonLd = {
     }
   ]
 };
-
 export default function RootLayout({ children }) {
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
   return (
     <html lang="ar" dir="rtl">
       <body>
+        {/* حقن بيانات الـ Schema المحسنة لمحركات البحث */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        
+        {/* كود التتبع الخاص بجوجل أناليتكس إذا كان متوفراً */}
         {gaId ? (
           <>
             <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
@@ -170,6 +195,7 @@ export default function RootLayout({ children }) {
             />
           </>
         ) : null}
+        
         <div className="site-shell">
           <Header />
           <main>{children}</main>
