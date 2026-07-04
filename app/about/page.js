@@ -3,14 +3,56 @@ import SectionTitle from '@/components/SectionTitle';
 import CardGrid from '@/components/CardGrid';
 import { biography, credentials, siteConfig, visionMission } from '@/data/site';
 
+const pageUrl = `${siteConfig.siteUrl}/about`;
+
 export const metadata = {
   title: 'من هو د. أحمد المعيقلي',
-  description: 'نبذة تعريفية كاملة عن د. أحمد المعيقلي ورحلته الأكاديمية ورؤيته العلمية في علم المصريات.'
+  description: 'نبذة تعريفية كاملة عن د. أحمد المعيقلي ورحلته الأكاديمية ورؤيته العلمية في علم المصريات.',
+  alternates: {
+    canonical: pageUrl,
+  },
+  openGraph: {
+    title: 'من هو د. أحمد المعيقلي | السيرة الأكاديمية',
+    description: 'نبذة تعريفية كاملة عن د. أحمد المعيقلي ورحلته الأكاديمية ورؤيته العلمية في علم المصريات.',
+    url: pageUrl,
+  }
 };
 
 export default function AboutPage() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': ['AboutPage', 'ProfilePage'],
+    '@id': `${pageUrl}/#webpage`,
+    url: pageUrl,
+    name: 'السيرة التعريفية - د. أحمد المعيقلي',
+    description: metadata.description,
+    inLanguage: 'ar-EG',
+    mainEntity: {
+      '@type': 'Person',
+      '@id': `${siteConfig.siteUrl}/#person`,
+      name: 'د. أحمد المعيقلي',
+      jobTitle: 'عالم مصريات وباحث في الآثار المصرية القديمة',
+      description: biography.intro,
+      alumniOf: credentials.map(c => ({
+        '@type': 'Organization',
+        name: c.institution
+      })),
+      knowsAbout: [
+        'علم المصريات',
+        'الآثار المصرية',
+        'التاريخ المصري القديم',
+        'Egyptology'
+      ]
+    }
+  };
+
   return (
     <>
+      <script 
+        type="application/ld+json" 
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} 
+      />
+
       <PageHero
         eyebrow="السيرة التعريفية"
         title="من هو د. أحمد المعيقلي؟"
