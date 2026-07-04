@@ -1,15 +1,65 @@
 import PageHero from '@/components/PageHero';
 import SectionTitle from '@/components/SectionTitle';
-import { researchArticles, researchThemes } from '@/data/site';
+import { researchArticles, researchThemes, siteConfig } from '@/data/site';
+
+const pageUrl = `${siteConfig.siteUrl}/articles`;
 
 export const metadata = {
   title: 'الأبحاث والمقالات',
-  description: 'محاور بحثية ومقالات معرفية تعكس اهتمام د. أحمد المعيقلي بتاريخ مصر القديمة وحماية التراث.'
+  description: 'محاور بحثية ومقالات معرفية تعكس اهتمام د. أحمد المعيقلي بتاريخ مصر القديمة وحماية التراث.',
+  alternates: {
+    canonical: pageUrl,
+  },
+  openGraph: {
+    title: 'الأبحاث والمقالات | د. أحمد المعيقلي',
+    description: 'محاور بحثية ومقالات معرفية تعكس اهتمام د. أحمد المعيقلي بتاريخ مصر القديمة وحماية التراث.',
+    url: pageUrl,
+  }
 };
 
 export default function ArticlesPage() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${pageUrl}/#webpage`,
+    url: pageUrl,
+    name: 'الأبحاث والمقالات - د. أحمد المعيقلي',
+    description: metadata.description,
+    inLanguage: 'ar-EG',
+    isPartOf: {
+      '@id': `${siteConfig.siteUrl}/#website`
+    },
+    about: {
+      '@type': 'Thing',
+      name: 'Egyptology',
+      sameAs: 'https://ar.wikipedia.org/wiki/علم_المصريات'
+    },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: researchArticles.map((article, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'ScholarlyArticle',
+          headline: article.title,
+          abstract: article.summary,
+          author: {
+            '@id': `${siteConfig.siteUrl}/#person`
+          },
+          keywords: article.category,
+          inLanguage: 'ar-EG'
+        }
+      }))
+    }
+  };
+
   return (
     <>
+      <script 
+        type="application/ld+json" 
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} 
+      />
+
       <PageHero
         eyebrow="الأبحاث والمقالات"
         title="أبحاث ومقالات مختارة"
